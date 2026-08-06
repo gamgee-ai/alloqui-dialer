@@ -28,7 +28,7 @@ export class AlloquiDialer extends EventEmitter<CallEventMap> {
 
   constructor(private config: AlloquiConfig) {
     super();
-    this.tokenManager = new TokenManager(config.projectKey, config.apiBaseUrl ?? DEFAULT_CONFIG.apiBaseUrl);
+    this.tokenManager = new TokenManager(config.projectKey, config.apiBaseUrl || DEFAULT_CONFIG.apiBaseUrl);
     this.tokenManager.onRefreshFailed = (error) => {
       this.dialerState = DialerState.Error;
       this.lastError = error;
