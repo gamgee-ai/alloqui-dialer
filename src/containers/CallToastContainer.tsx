@@ -43,17 +43,17 @@ export function CallToastContainer({ callState, call, lastCall, muted, held, con
     if (isDialing) {
       toastId.current = toast.custom(
         (id) => <DialingToast phoneNumber={active.phoneNumber} contactName={name} onCancel={() => { handlersRef.current.onHangup(); toast.dismiss(id); }} />,
-        { duration: Infinity, toasterId: "phonon-dialer" },
+        { duration: Infinity, toasterId: "alloqui-dialer" },
       );
     } else if (isConnected) {
       toastId.current = toast.custom(
         (id) => <CallToast phoneNumber={active.phoneNumber} contactName={name} duration={active.duration} muted={muted} held={held} onToggleMute={() => handlersRef.current.onToggleMute()} onToggleHold={() => handlersRef.current.onToggleHold()} onHangup={() => { handlersRef.current.onHangup(); toast.dismiss(id); }} />,
-        { duration: Infinity, toasterId: "phonon-dialer" },
+        { duration: Infinity, toasterId: "alloqui-dialer" },
       );
     } else if (isEnded || isDisconnected) {
       toastId.current = toast.custom(
         (id) => <EndedToast phoneNumber={active.phoneNumber} contactName={name} duration={active.duration} disconnected={isDisconnected} onRedial={() => { handlersRef.current.onRedial(); toast.dismiss(id); }} onClose={() => toast.dismiss(id)} />,
-        { duration: 8000, toasterId: "phonon-dialer" },
+        { duration: 8000, toasterId: "alloqui-dialer" },
       );
     }
   }, [callState, call, lastCall, muted, held]);

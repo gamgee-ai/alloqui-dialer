@@ -29,9 +29,9 @@ export function FloatContainer({ position, callState, muted, children }: Props) 
   }, [isExpanded]);
 
   return createPortal(
-    <div className={`phonon-float phonon-float--${position}`}>
+    <div className={`alloqui-float alloqui-float--${position}`}>
       {!isExpanded && <FloatBubble callState={callState} muted={muted} onClick={handleExpand} />}
-      {isExpanded && <div ref={panelRef} className="phonon-float-panel">{children}</div>}
+      {isExpanded && <div ref={panelRef} className="alloqui-float-panel">{children}</div>}
     </div>,
     document.body,
   );

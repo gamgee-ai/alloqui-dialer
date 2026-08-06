@@ -1,21 +1,21 @@
 {
-  "name": "@phonon/dialer",
-  "version": "0.1.4",
+  "name": "@alloqui/dialer",
+  "version": "1.0.0",
   "description": "Drop-in React dialer component for any telephony provider. Firebase for Voice.",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/phonon-react.cjs",
-  "module": "./dist/phonon-react.js",
+  "main": "./dist/alloqui-react.cjs",
+  "module": "./dist/alloqui-react.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/phonon-react.js"
+        "default": "./dist/alloqui-react.js"
       },
       "require": {
         "types": "./dist/index.d.cts",
-        "default": "./dist/phonon-react.cjs"
+        "default": "./dist/alloqui-react.cjs"
       }
     },
     "./style.css": "./dist/style.css"
@@ -32,14 +32,14 @@
     "voip",
     "twilio",
     "plivo",
-    "phonon",
+    "alloqui",
     "webrtc",
     "telephony",
     "voice"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gamgee-ai/phonon-dialer"
+    "url": "https://github.com/gamgee-ai/alloqui-dialer"
   },
   "publishConfig": {
     "access": "public",

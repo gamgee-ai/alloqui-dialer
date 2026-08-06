@@ -32,12 +32,12 @@ export function Dialer({
   const sonnerTheme = theme === 'auto' ? undefined : theme;
 
   const panel = (
-    <div className="phonon-dialer" data-phonon-theme={theme}>
-      <div className="phonon-header">
-        <span className="phonon-logo">phonon</span>
-        <div className="phonon-status">
-          <div className={`phonon-status-dot ${dialer.dialerState === DialerState.Error ? 'phonon-status-dot--error' : ''}`} />
-          <span className="phonon-status-text">
+    <div className="alloqui-dialer" data-alloqui-theme={theme}>
+      <div className="alloqui-header">
+        <span className="alloqui-logo">alloqui</span>
+        <div className="alloqui-status">
+          <div className={`alloqui-status-dot ${dialer.dialerState === DialerState.Error ? 'alloqui-status-dot--error' : ''}`} />
+          <span className="alloqui-status-text">
             {dialer.dialerState === DialerState.Ready ? 'Ready' : dialer.dialerState === DialerState.Initializing ? 'Connecting...' : 'Error'}
           </span>
         </div>
@@ -54,7 +54,7 @@ export function Dialer({
         onToggleMute={dialer.toggleMute} onToggleHold={dialer.toggleHold}
         onHangup={dialer.hangup} onRedial={dialer.redial}
       />
-      <Toaster id="phonon-dialer" theme={sonnerTheme} position="top-center" />
+      <Toaster id="alloqui-dialer" theme={sonnerTheme} position="top-center" />
     </>
   );
 

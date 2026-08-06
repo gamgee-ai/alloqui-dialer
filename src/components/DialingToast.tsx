@@ -8,17 +8,17 @@ interface Props {
 
 export function DialingToast({ phoneNumber, contactName, onCancel }: Props) {
   return (
-    <div className="phonon-toast">
-      <div className="phonon-toast-top">
-        <div className="phonon-toast-dot phonon-toast-dot--dialing" />
-        <div className="phonon-toast-info">
-          <span className="phonon-toast-number">{phoneNumber}</span>
-          <span className="phonon-toast-name">{contactName ?? 'Unknown'}</span>
+    <div className="alloqui-toast">
+      <div className="alloqui-toast-top">
+        <div className="alloqui-toast-dot alloqui-toast-dot--dialing" />
+        <div className="alloqui-toast-info">
+          <span className="alloqui-toast-number">{phoneNumber}</span>
+          <span className="alloqui-toast-name">{contactName ?? 'Unknown'}</span>
         </div>
-        <span className="phonon-toast-timer">Calling...</span>
+        <span className="alloqui-toast-timer">Calling...</span>
       </div>
-      <div className="phonon-toast-buttons">
-        <button className="phonon-toast-btn phonon-toast-btn--danger phonon-toast-btn--full" onClick={onCancel} type="button">
+      <div className="alloqui-toast-buttons">
+        <button className="alloqui-toast-btn alloqui-toast-btn--danger alloqui-toast-btn--full" onClick={onCancel} type="button">
           <PhoneOff size={16} /> <span>Cancel</span>
         </button>
       </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { PhononDialer, type DialerSnapshot } from '../engine/PhononDialer';
+import { AlloquiDialer, type DialerSnapshot } from '../engine/AlloquiDialer';
 import { CallState, DialerState } from '../types';
-import type { PhononConfig } from '../types';
+import type { AlloquiConfig } from '../types';
 
 const INITIAL_SNAPSHOT: DialerSnapshot = {
   dialerState: DialerState.Initializing,
@@ -13,8 +13,8 @@ const INITIAL_SNAPSHOT: DialerSnapshot = {
   lastError: null,
 };
 
-export function useDialer(config: PhononConfig) {
-  const dialerRef = useRef<PhononDialer | null>(null);
+export function useDialer(config: AlloquiConfig) {
+  const dialerRef = useRef<AlloquiDialer | null>(null);
   const callbacksRef = useRef(config);
   useEffect(() => {
     callbacksRef.current = config;
@@ -23,7 +23,7 @@ export function useDialer(config: PhononConfig) {
   const [snapshot, setSnapshot] = useState<DialerSnapshot>(INITIAL_SNAPSHOT);
 
   useEffect(() => {
-    const stableConfig: PhononConfig = {
+    const stableConfig: AlloquiConfig = {
       projectKey: config.projectKey,
       apiBaseUrl: config.apiBaseUrl,
       onCallStart: (...args) => callbacksRef.current.onCallStart?.(...args),
@@ -31,7 +31,7 @@ export function useDialer(config: PhononConfig) {
       onError: (...args) => callbacksRef.current.onError?.(...args),
     };
 
-    const dialer = new PhononDialer(stableConfig);
+    const dialer = new AlloquiDialer(stableConfig);
     dialerRef.current = dialer;
 
     const update = () => setSnapshot(dialer.getSnapshot());

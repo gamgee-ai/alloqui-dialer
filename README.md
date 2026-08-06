@@ -1,11 +1,11 @@
-# @phonon/dialer
+# @alloqui/dialer
 
-Drop-in React dialer component for any telephony provider. Enter your Twilio or Plivo keys on [phonon.dev](https://phonon.dev), get a project key, and make calls from your app.
+Drop-in React dialer component for any telephony provider. Enter your Twilio or Plivo keys on [alloqui.dev](https://alloqui.dev), get a project key, and make calls from your app.
 
 ## Install
 
 ```bash
-npm install @phonon/dialer
+npm install @alloqui/dialer
 
 # Install your telephony provider SDK (pick one):
 npm install @twilio/voice-sdk    # for Twilio
@@ -15,13 +15,13 @@ npm install plivo-browser-sdk    # for Plivo
 ## Usage
 
 ```tsx
-import { Dialer } from '@phonon/dialer';
+import { Dialer } from '@alloqui/dialer';
 
 
 function App() {
   return (
     <Dialer
-      projectKey="ph_live_abc123"
+      projectKey="al_live_abc123"
       mode="float"
       position="bottom-right"
     />
@@ -36,11 +36,11 @@ This component uses browser APIs (WebRTC, WebSocket). In Next.js App Router, wra
 ```tsx
 "use client";
 
-import { Dialer } from '@phonon/dialer';
+import { Dialer } from '@alloqui/dialer';
 
 
-export function PhononDialer() {
-  return <Dialer projectKey="ph_live_abc123" />;
+export function AlloquiDialer() {
+  return <Dialer projectKey="al_live_abc123" />;
 }
 ```
 
@@ -48,8 +48,8 @@ export function PhononDialer() {
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `projectKey` | `string` | required | Your Phonon project API key |
-| `apiBaseUrl` | `string` | `https://api.phonon.dev` | API endpoint |
+| `projectKey` | `string` | required | Your Alloqui project API key |
+| `apiBaseUrl` | `string` | `https://api.alloqui.dev` | API endpoint |
 | `mode` | `'float' \| 'panel'` | `'float'` | Display mode |
 | `position` | `FloatPosition` | `'bottom-right'` | Float bubble position |
 | `theme` | `DialerTheme` | `'auto'` | Color theme |
@@ -63,11 +63,11 @@ export function PhononDialer() {
 Use the engine directly without UI:
 
 ```tsx
-import { PhononDialer } from '@phonon/dialer';
+import { AlloquiDialer } from '@alloqui/dialer';
 
-const dialer = new PhononDialer({
-  projectKey: 'ph_live_abc123',
-  apiBaseUrl: 'https://api.phonon.dev',
+const dialer = new AlloquiDialer({
+  projectKey: 'al_live_abc123',
+  apiBaseUrl: 'https://api.alloqui.dev',
 });
 
 dialer.on('dialer.ready', () => {
@@ -82,12 +82,12 @@ dialer.on('call.ended', () => {
 ## Hook
 
 ```tsx
-import { useDialer } from '@phonon/dialer';
+import { useDialer } from '@alloqui/dialer';
 
 
 function MyDialer() {
   const { state, makeCall, hangup, toggleMute, toggleHold, sendDTMF } = useDialer({
-    projectKey: 'ph_live_abc123',
+    projectKey: 'al_live_abc123',
   });
 
   return (

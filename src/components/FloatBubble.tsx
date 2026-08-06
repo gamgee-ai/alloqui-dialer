@@ -9,10 +9,10 @@ interface Props {
 
 export function FloatBubble({ callState, muted, onClick }: Props) {
   const isActive = [CallState.Connected, CallState.Dialing, CallState.Ringing].includes(callState);
-  const pulseClass = isActive ? (muted ? 'phonon-float-bubble--muted' : 'phonon-float-bubble--active') : '';
+  const pulseClass = isActive ? (muted ? 'alloqui-float-bubble--muted' : 'alloqui-float-bubble--active') : '';
 
   return (
-    <button className={`phonon-float-bubble ${pulseClass}`} onClick={onClick} type="button" aria-label="Open dialer">
+    <button className={`alloqui-float-bubble ${pulseClass}`} onClick={onClick} type="button" aria-label="Open dialer">
       <Phone size={24} />
     </button>
   );
