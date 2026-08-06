@@ -25,36 +25,36 @@ export function DialPad({ phoneNumber, onPhoneNumberChange, onDigitPress, onCall
 
   return (
     <>
-      <div className="phonon-number-area">
+      <div className="alloqui-number-area">
         <input
-          className="phonon-number-input"
+          className="alloqui-number-input"
           type="tel"
           value={phoneNumber}
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
           placeholder="Enter a number"
         />
-        {!phoneNumber && <span className="phonon-number-hint">Enter a number to call</span>}
+        {!phoneNumber && <span className="alloqui-number-hint">Enter a number to call</span>}
       </div>
 
-      <div className="phonon-dialpad">
+      <div className="alloqui-dialpad">
         {KEYS.map((row, i) => (
-          <div key={i} className="phonon-dialpad-row">
+          <div key={i} className="alloqui-dialpad-row">
             {row.map(({ num, sub }) => (
-              <button key={num} className="phonon-dialpad-btn" onClick={() => onDigitPress(num)} type="button">
-                <span className="phonon-dialpad-btn__num">{num}</span>
-                {sub && <span className="phonon-dialpad-btn__sub">{sub}</span>}
+              <button key={num} className="alloqui-dialpad-btn" onClick={() => onDigitPress(num)} type="button">
+                <span className="alloqui-dialpad-btn__num">{num}</span>
+                {sub && <span className="alloqui-dialpad-btn__sub">{sub}</span>}
               </button>
             ))}
           </div>
         ))}
       </div>
 
-      <div className="phonon-bottom">
-        <button className="phonon-call-btn phonon-call-btn--call" onClick={onCall} disabled={!phoneNumber.trim()} type="button">
+      <div className="alloqui-bottom">
+        <button className="alloqui-call-btn alloqui-call-btn--call" onClick={onCall} disabled={!phoneNumber.trim()} type="button">
           <Phone size={28} />
         </button>
-        <span className="phonon-powered-by">powered by phonon</span>
+        <span className="alloqui-powered-by">powered by alloqui</span>
       </div>
     </>
   );

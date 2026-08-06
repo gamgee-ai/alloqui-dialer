@@ -1,176 +1,176 @@
-/* Phonon Dialer — Design Tokens */
+/* Alloqui Dialer — Design Tokens */
 
 :root,
-.phonon-dialer {
-  --phonon-bg: #ffffff;
-  --phonon-surface: #f0f0f0;
-  --phonon-surface-hover: #e5e5e5;
-  --phonon-text-primary: #0a0a0a;
-  --phonon-text-secondary: #71717a;
-  --phonon-text-muted: #a1a1aa;
-  --phonon-success: #22c55e;
-  --phonon-danger: #ef4444;
-  --phonon-radius-full: 9999px;
-  --phonon-radius-lg: 12px;
-  --phonon-font-heading: 'Geist', system-ui, -apple-system, sans-serif;
-  --phonon-font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --phonon-font-mono: 'Geist Mono', ui-monospace, monospace;
+.alloqui-dialer {
+  --alloqui-bg: #ffffff;
+  --alloqui-surface: #f0f0f0;
+  --alloqui-surface-hover: #e5e5e5;
+  --alloqui-text-primary: #0a0a0a;
+  --alloqui-text-secondary: #71717a;
+  --alloqui-text-muted: #a1a1aa;
+  --alloqui-success: #22c55e;
+  --alloqui-danger: #ef4444;
+  --alloqui-radius-full: 9999px;
+  --alloqui-radius-lg: 12px;
+  --alloqui-font-heading: 'Geist', system-ui, -apple-system, sans-serif;
+  --alloqui-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --alloqui-font-mono: 'Geist Mono', ui-monospace, monospace;
 }
 
-.phonon-dialer[data-phonon-theme="dark"],
-.dark .phonon-dialer,
-[data-theme="dark"] .phonon-dialer,
-[data-color-mode="dark"] .phonon-dialer {
-  --phonon-bg: #0a0a0a;
-  --phonon-surface: #1a1a1a;
-  --phonon-surface-hover: #2a2a2a;
-  --phonon-text-primary: #ffffff;
-  --phonon-text-secondary: #a1a1aa;
-  --phonon-text-muted: #71717a;
+.alloqui-dialer[data-alloqui-theme="dark"],
+.dark .alloqui-dialer,
+[data-theme="dark"] .alloqui-dialer,
+[data-color-mode="dark"] .alloqui-dialer {
+  --alloqui-bg: #0a0a0a;
+  --alloqui-surface: #1a1a1a;
+  --alloqui-surface-hover: #2a2a2a;
+  --alloqui-text-primary: #ffffff;
+  --alloqui-text-secondary: #a1a1aa;
+  --alloqui-text-muted: #71717a;
 }
 
 /* Base */
-.phonon-dialer {
+.alloqui-dialer {
   display: flex;
   flex-direction: column;
   width: 360px;
   height: 640px;
-  background: var(--phonon-bg);
+  background: var(--alloqui-bg);
   border-radius: 16px;
   overflow: hidden;
-  font-family: var(--phonon-font-body);
-  color: var(--phonon-text-primary);
+  font-family: var(--alloqui-font-body);
+  color: var(--alloqui-text-primary);
   user-select: none;
   box-sizing: border-box;
 }
 
-.phonon-dialer *, .phonon-dialer *::before, .phonon-dialer *::after { box-sizing: border-box; }
+.alloqui-dialer *, .alloqui-dialer *::before, .alloqui-dialer *::after { box-sizing: border-box; }
 
 /* Header */
-.phonon-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; }
-.phonon-logo { font-family: var(--phonon-font-heading); font-size: 18px; font-weight: 600; color: var(--phonon-text-primary); }
-.phonon-status { display: flex; align-items: center; gap: 6px; }
-.phonon-status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--phonon-success); }
-.phonon-status-dot--error { background: var(--phonon-danger); }
-.phonon-status-text { font-size: 12px; color: var(--phonon-text-muted); }
+.alloqui-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; }
+.alloqui-logo { font-family: var(--alloqui-font-heading); font-size: 18px; font-weight: 600; color: var(--alloqui-text-primary); }
+.alloqui-status { display: flex; align-items: center; gap: 6px; }
+.alloqui-status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--alloqui-success); }
+.alloqui-status-dot--error { background: var(--alloqui-danger); }
+.alloqui-status-text { font-size: 12px; color: var(--alloqui-text-muted); }
 
 /* Number Input */
-.phonon-number-area { display: flex; flex-direction: column; align-items: center; padding: 24px 20px; gap: 8px; }
-.phonon-number-input { font-family: var(--phonon-font-mono); font-size: 28px; font-weight: 500; color: var(--phonon-text-primary); text-align: center; background: none; border: none; outline: none; width: 100%; }
-.phonon-number-hint { font-size: 13px; color: var(--phonon-text-muted); }
+.alloqui-number-area { display: flex; flex-direction: column; align-items: center; padding: 24px 20px; gap: 8px; }
+.alloqui-number-input { font-family: var(--alloqui-font-mono); font-size: 28px; font-weight: 500; color: var(--alloqui-text-primary); text-align: center; background: none; border: none; outline: none; width: 100%; }
+.alloqui-number-hint { font-size: 13px; color: var(--alloqui-text-muted); }
 
 /* Dial Pad */
-.phonon-dialpad { display: flex; flex-direction: column; align-items: center; padding: 8px 32px; gap: 12px; }
-.phonon-dialpad-row { display: flex; gap: 16px; justify-content: center; width: 100%; }
-.phonon-dialpad-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: var(--phonon-radius-full); background: var(--phonon-surface); border: none; cursor: pointer; gap: 2px; transition: background 0.15s; padding: 0; }
-.phonon-dialpad-btn:hover { background: var(--phonon-surface-hover); }
-.phonon-dialpad-btn:active { transform: scale(0.95); }
-.phonon-dialpad-btn__num { font-family: var(--phonon-font-heading); font-size: 24px; font-weight: 400; color: var(--phonon-text-primary); line-height: 1; }
-.phonon-dialpad-btn__sub { font-family: var(--phonon-font-body); font-size: 9px; font-weight: 500; color: var(--phonon-text-muted); letter-spacing: 1.5px; }
+.alloqui-dialpad { display: flex; flex-direction: column; align-items: center; padding: 8px 32px; gap: 12px; }
+.alloqui-dialpad-row { display: flex; gap: 16px; justify-content: center; width: 100%; }
+.alloqui-dialpad-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: var(--alloqui-radius-full); background: var(--alloqui-surface); border: none; cursor: pointer; gap: 2px; transition: background 0.15s; padding: 0; }
+.alloqui-dialpad-btn:hover { background: var(--alloqui-surface-hover); }
+.alloqui-dialpad-btn:active { transform: scale(0.95); }
+.alloqui-dialpad-btn__num { font-family: var(--alloqui-font-heading); font-size: 24px; font-weight: 400; color: var(--alloqui-text-primary); line-height: 1; }
+.alloqui-dialpad-btn__sub { font-family: var(--alloqui-font-body); font-size: 9px; font-weight: 500; color: var(--alloqui-text-muted); letter-spacing: 1.5px; }
 
 /* Bottom */
-.phonon-bottom { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 1; padding: 16px 32px 32px; gap: 16px; }
-.phonon-call-btn { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: var(--phonon-radius-full); border: none; cursor: pointer; transition: transform 0.15s, opacity 0.15s; }
-.phonon-call-btn:hover { opacity: 0.9; }
-.phonon-call-btn:active { transform: scale(0.92); }
-.phonon-call-btn--call { background: var(--phonon-success); }
-.phonon-call-btn svg { color: #ffffff; }
-.phonon-powered-by { font-size: 10px; color: var(--phonon-text-muted); }
+.alloqui-bottom { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 1; padding: 16px 32px 32px; gap: 16px; }
+.alloqui-call-btn { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: var(--alloqui-radius-full); border: none; cursor: pointer; transition: transform 0.15s, opacity 0.15s; }
+.alloqui-call-btn:hover { opacity: 0.9; }
+.alloqui-call-btn:active { transform: scale(0.92); }
+.alloqui-call-btn--call { background: var(--alloqui-success); }
+.alloqui-call-btn svg { color: #ffffff; }
+.alloqui-powered-by { font-size: 10px; color: var(--alloqui-text-muted); }
 
 /* ============================================
    Sonner Toast
    ============================================ */
 
-.phonon-toast {
-  --phonon-toast-bg: #f7f7f7;
-  --phonon-toast-btn-bg: #f0f0f0;
-  --phonon-toast-btn-text: #0a0a0a;
-  --phonon-toast-btn-active-bg: #0a0a0a;
-  --phonon-toast-btn-active-text: #ffffff;
-  --phonon-toast-number: #0a0a0a;
-  --phonon-toast-name: #71717a;
-  --phonon-toast-timer: #71717a;
-  --phonon-toast-dot-dialing: #3b82f6;
-  --phonon-toast-dot-connected: #22c55e;
-  --phonon-toast-dot-muted: #fbbf24;
-  --phonon-toast-dot-ended: #71717a;
-  --phonon-toast-dot-disconnected: #ef4444;
+.alloqui-toast {
+  --alloqui-toast-bg: #f7f7f7;
+  --alloqui-toast-btn-bg: #f0f0f0;
+  --alloqui-toast-btn-text: #0a0a0a;
+  --alloqui-toast-btn-active-bg: #0a0a0a;
+  --alloqui-toast-btn-active-text: #ffffff;
+  --alloqui-toast-number: #0a0a0a;
+  --alloqui-toast-name: #71717a;
+  --alloqui-toast-timer: #71717a;
+  --alloqui-toast-dot-dialing: #3b82f6;
+  --alloqui-toast-dot-connected: #22c55e;
+  --alloqui-toast-dot-muted: #fbbf24;
+  --alloqui-toast-dot-ended: #71717a;
+  --alloqui-toast-dot-disconnected: #ef4444;
   width: 380px;
-  background: var(--phonon-toast-bg);
+  background: var(--alloqui-toast-bg);
   border-radius: 16px;
   padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-family: var(--phonon-font-body);
+  font-family: var(--alloqui-font-body);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
 }
 
-.dark .phonon-toast,
-[data-theme="dark"] .phonon-toast,
-[data-color-mode="dark"] .phonon-toast,
-[data-sonner-toaster][data-theme="dark"] .phonon-toast {
-  --phonon-toast-bg: #262626;
-  --phonon-toast-btn-bg: #3a3a3a;
-  --phonon-toast-btn-text: #ffffff;
-  --phonon-toast-btn-active-bg: #ffffff;
-  --phonon-toast-btn-active-text: #0a0a0a;
-  --phonon-toast-number: #ffffff;
-  --phonon-toast-name: #a1a1aa;
-  --phonon-toast-timer: #a1a1aa;
+.dark .alloqui-toast,
+[data-theme="dark"] .alloqui-toast,
+[data-color-mode="dark"] .alloqui-toast,
+[data-sonner-toaster][data-theme="dark"] .alloqui-toast {
+  --alloqui-toast-bg: #262626;
+  --alloqui-toast-btn-bg: #3a3a3a;
+  --alloqui-toast-btn-text: #ffffff;
+  --alloqui-toast-btn-active-bg: #ffffff;
+  --alloqui-toast-btn-active-text: #0a0a0a;
+  --alloqui-toast-number: #ffffff;
+  --alloqui-toast-name: #a1a1aa;
+  --alloqui-toast-timer: #a1a1aa;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
-.phonon-toast-top { display: flex; align-items: center; gap: 10px; }
-.phonon-toast-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--phonon-toast-dot-connected); }
-.phonon-toast-dot--dialing { background: var(--phonon-toast-dot-dialing); }
-.phonon-toast-dot--connected { background: var(--phonon-toast-dot-connected); }
-.phonon-toast-dot--muted { background: var(--phonon-toast-dot-muted); }
-.phonon-toast-dot--ended { background: var(--phonon-toast-dot-ended); }
-.phonon-toast-dot--disconnected { background: var(--phonon-toast-dot-disconnected); }
-.phonon-toast-info { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
-.phonon-toast-number { font-family: var(--phonon-font-mono); font-size: 15px; font-weight: 500; color: var(--phonon-toast-number); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.phonon-toast-name { font-size: 12px; color: var(--phonon-toast-name); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.phonon-toast-timer { font-family: var(--phonon-font-mono); font-size: 14px; color: var(--phonon-toast-timer); flex-shrink: 0; }
-.phonon-toast-buttons { display: flex; gap: 8px; }
-.phonon-toast-btn { display: flex; align-items: center; justify-content: center; gap: 6px; flex: 1; height: 40px; border-radius: var(--phonon-radius-full); background: var(--phonon-toast-btn-bg); color: var(--phonon-toast-btn-text); border: none; cursor: pointer; font-family: var(--phonon-font-body); font-size: 13px; font-weight: 500; transition: opacity 0.15s; padding: 0 12px; }
-.phonon-toast-btn:hover { opacity: 0.85; }
-.phonon-toast-btn--active { background: var(--phonon-toast-btn-active-bg); color: var(--phonon-toast-btn-active-text); }
-.phonon-toast-btn--danger { background: #ef4444; color: #ffffff; }
-.phonon-toast-btn--success { background: #22c55e; color: #ffffff; }
-.phonon-toast-btn--full { flex: 1; }
+.alloqui-toast-top { display: flex; align-items: center; gap: 10px; }
+.alloqui-toast-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--alloqui-toast-dot-connected); }
+.alloqui-toast-dot--dialing { background: var(--alloqui-toast-dot-dialing); }
+.alloqui-toast-dot--connected { background: var(--alloqui-toast-dot-connected); }
+.alloqui-toast-dot--muted { background: var(--alloqui-toast-dot-muted); }
+.alloqui-toast-dot--ended { background: var(--alloqui-toast-dot-ended); }
+.alloqui-toast-dot--disconnected { background: var(--alloqui-toast-dot-disconnected); }
+.alloqui-toast-info { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
+.alloqui-toast-number { font-family: var(--alloqui-font-mono); font-size: 15px; font-weight: 500; color: var(--alloqui-toast-number); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.alloqui-toast-name { font-size: 12px; color: var(--alloqui-toast-name); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.alloqui-toast-timer { font-family: var(--alloqui-font-mono); font-size: 14px; color: var(--alloqui-toast-timer); flex-shrink: 0; }
+.alloqui-toast-buttons { display: flex; gap: 8px; }
+.alloqui-toast-btn { display: flex; align-items: center; justify-content: center; gap: 6px; flex: 1; height: 40px; border-radius: var(--alloqui-radius-full); background: var(--alloqui-toast-btn-bg); color: var(--alloqui-toast-btn-text); border: none; cursor: pointer; font-family: var(--alloqui-font-body); font-size: 13px; font-weight: 500; transition: opacity 0.15s; padding: 0 12px; }
+.alloqui-toast-btn:hover { opacity: 0.85; }
+.alloqui-toast-btn--active { background: var(--alloqui-toast-btn-active-bg); color: var(--alloqui-toast-btn-active-text); }
+.alloqui-toast-btn--danger { background: #ef4444; color: #ffffff; }
+.alloqui-toast-btn--success { background: #22c55e; color: #ffffff; }
+.alloqui-toast-btn--full { flex: 1; }
 
 /* ============================================
    Float Mode
    ============================================ */
 
-.phonon-float { position: fixed; z-index: 99999; }
-.phonon-float--bottom-right { bottom: 24px; right: 24px; }
-.phonon-float--bottom-left { bottom: 24px; left: 24px; }
-.phonon-float--top-right { top: 24px; right: 24px; }
-.phonon-float--top-left { top: 24px; left: 24px; }
+.alloqui-float { position: fixed; z-index: 99999; }
+.alloqui-float--bottom-right { bottom: 24px; right: 24px; }
+.alloqui-float--bottom-left { bottom: 24px; left: 24px; }
+.alloqui-float--top-right { top: 24px; right: 24px; }
+.alloqui-float--top-left { top: 24px; left: 24px; }
 
-.phonon-float-bubble { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: var(--phonon-radius-full); background: var(--phonon-success); border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); transition: transform 0.15s; }
-.phonon-float-bubble:hover { transform: scale(1.08); }
-.phonon-float-bubble:active { transform: scale(0.95); }
-.phonon-float-bubble svg { color: #ffffff; }
-.phonon-float-bubble--active { animation: phonon-pulse-green 2s infinite; }
-.phonon-float-bubble--muted { background: #fbbf24; animation: phonon-pulse-yellow 2s infinite; }
+.alloqui-float-bubble { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: var(--alloqui-radius-full); background: var(--alloqui-success); border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); transition: transform 0.15s; }
+.alloqui-float-bubble:hover { transform: scale(1.08); }
+.alloqui-float-bubble:active { transform: scale(0.95); }
+.alloqui-float-bubble svg { color: #ffffff; }
+.alloqui-float-bubble--active { animation: alloqui-pulse-green 2s infinite; }
+.alloqui-float-bubble--muted { background: #fbbf24; animation: alloqui-pulse-yellow 2s infinite; }
 
-@keyframes phonon-pulse-green {
+@keyframes alloqui-pulse-green {
   0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
   70% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
   100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }
 
-@keyframes phonon-pulse-yellow {
+@keyframes alloqui-pulse-yellow {
   0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.5); }
   70% { box-shadow: 0 0 0 12px rgba(251, 191, 36, 0); }
   100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
 }
 
-.phonon-float-panel { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); border-radius: 16px; overflow: hidden; }
+.alloqui-float-panel { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); border-radius: 16px; overflow: hidden; }
 
 /* Dev page (not shipped) */
-.phonon-dev-page { padding: 40px; }
-.phonon-dev-title { font-family: system-ui, sans-serif; margin-bottom: 24px; }
+.alloqui-dev-page { padding: 40px; }
+.alloqui-dev-title { font-family: system-ui, sans-serif; margin-bottom: 24px; }

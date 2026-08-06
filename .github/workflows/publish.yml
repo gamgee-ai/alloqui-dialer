@@ -1,4 +1,4 @@
-name: Publish @phonon/dialer
+name: Publish @alloqui/dialer
 
 on:
   push:
@@ -30,5 +30,7 @@ jobs:
       - run: pnpm tsc --noEmit -p tsconfig.build.json
 
       - run: pnpm run build
+        env:
+          VITE_ALLOQUI_API_URL: ${{ secrets.ALLOQUI_API_URL }}
 
       - run: npm publish --provenance --access public

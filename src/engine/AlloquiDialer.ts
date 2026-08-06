@@ -1,4 +1,4 @@
-import { CallState, CallDirection, DialerState, type PhononConfig, type CallInfo, type CallEventMap } from '../types';
+import { CallState, CallDirection, DialerState, type AlloquiConfig, type CallInfo, type CallEventMap } from '../types';
 import { DEFAULT_CONFIG } from '../constants';
 import { EventEmitter } from './EventEmitter';
 import { CallStateMachine } from './CallStateMachine';
@@ -15,7 +15,7 @@ export interface DialerSnapshot {
   lastError: Error | null;
 }
 
-export class PhononDialer extends EventEmitter<CallEventMap> {
+export class AlloquiDialer extends EventEmitter<CallEventMap> {
   private stateMachine = new CallStateMachine();
   private tokenManager: TokenManager;
   private dialerState: DialerState = DialerState.Initializing;
@@ -26,9 +26,9 @@ export class PhononDialer extends EventEmitter<CallEventMap> {
   private lastError: Error | null = null;
   private idleTransitionTimeout: ReturnType<typeof setTimeout> | null = null;
 
-  constructor(private config: PhononConfig) {
+  constructor(private config: AlloquiConfig) {
     super();
-    this.tokenManager = new TokenManager(config.projectKey, config.apiBaseUrl ?? DEFAULT_CONFIG.apiBaseUrl);
+    this.tokenManager = new TokenManager(config.projectKey, config.apiBaseUrl || DEFAULT_CONFIG.apiBaseUrl);
     this.tokenManager.onRefreshFailed = (error) => {
       this.dialerState = DialerState.Error;
       this.lastError = error;

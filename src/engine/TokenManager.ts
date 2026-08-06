@@ -58,7 +58,7 @@ export class TokenManager {
         this.refreshTimeout = setTimeout(() => this.refreshWithRetry(attempt + 1), delay);
       } else {
         const error = err instanceof Error ? err : new Error(String(err));
-        console.error('[Phonon] token refresh failed after retries:', error);
+        console.error('[Alloqui] token refresh failed after retries:', error);
         this.onRefreshFailed?.(error);
       }
     }

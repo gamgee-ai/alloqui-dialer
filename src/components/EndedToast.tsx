@@ -17,23 +17,23 @@ interface Props {
 export function EndedToast({ phoneNumber, contactName, duration, disconnected, onRedial, onClose }: Props) {
   const label = disconnected ? 'Disconnected' : 'Call ended';
   const subtitle = contactName ? `${label} · ${contactName}` : label;
-  const dotClass = disconnected ? 'phonon-toast-dot--disconnected' : 'phonon-toast-dot--ended';
+  const dotClass = disconnected ? 'alloqui-toast-dot--disconnected' : 'alloqui-toast-dot--ended';
 
   return (
-    <div className="phonon-toast">
-      <div className="phonon-toast-top">
-        <div className={`phonon-toast-dot ${dotClass}`} />
-        <div className="phonon-toast-info">
-          <span className="phonon-toast-number">{phoneNumber}</span>
-          <span className="phonon-toast-name">{subtitle}</span>
+    <div className="alloqui-toast">
+      <div className="alloqui-toast-top">
+        <div className={`alloqui-toast-dot ${dotClass}`} />
+        <div className="alloqui-toast-info">
+          <span className="alloqui-toast-number">{phoneNumber}</span>
+          <span className="alloqui-toast-name">{subtitle}</span>
         </div>
-        <span className="phonon-toast-timer">{fmt(duration)}</span>
+        <span className="alloqui-toast-timer">{fmt(duration)}</span>
       </div>
-      <div className="phonon-toast-buttons">
-        <button className="phonon-toast-btn phonon-toast-btn--success" onClick={onRedial} type="button">
+      <div className="alloqui-toast-buttons">
+        <button className="alloqui-toast-btn alloqui-toast-btn--success" onClick={onRedial} type="button">
           <Phone size={16} /> <span>Redial</span>
         </button>
-        <button className="phonon-toast-btn" onClick={onClose} type="button">
+        <button className="alloqui-toast-btn" onClick={onClose} type="button">
           <span>Close</span>
         </button>
       </div>

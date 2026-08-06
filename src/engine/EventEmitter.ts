@@ -21,7 +21,7 @@ export class EventEmitter<TEventMap extends { [K in keyof TEventMap]: TEventMap[
     ...args: TEventMap[K] extends undefined ? [] : [TEventMap[K]]
   ): void {
     this.listeners.get(event)?.forEach((listener) => {
-      try { listener(args[0]); } catch (err) { console.error('[Phonon] listener error:', event, err); }
+      try { listener(args[0]); } catch (err) { console.error('[Alloqui] listener error:', event, err); }
     });
   }
 

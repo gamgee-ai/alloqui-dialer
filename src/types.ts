@@ -21,7 +21,7 @@ export enum DialerState {
 export type DialerTheme = 'light' | 'dark' | 'auto';
 export type FloatPosition = 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
 
-export interface PhononConfig {
+export interface AlloquiConfig {
   projectKey: string;
   apiBaseUrl?: string;
   onCallStart?: (call: CallInfo) => void;
