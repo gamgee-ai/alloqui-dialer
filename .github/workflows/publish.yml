@@ -35,5 +35,4 @@ jobs:
 
       - run: npm publish --provenance --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           VITE_ALLOQUI_API_URL: ${{ secrets.ALLOQUI_API_URL }}
